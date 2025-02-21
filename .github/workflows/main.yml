@@ -1,0 +1,16 @@
+name: HTML CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@v3.0.0
